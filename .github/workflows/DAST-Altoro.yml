@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: CxDAST_Altoro_web
 
 # Controls when the workflow will run
 on:
@@ -31,8 +31,8 @@ jobs:
         CX_APIKEY: ${{ secrets.CX_ONE_API_KEY }}
       with:
         command: "web"
-        config: 'zap_config.yaml'
+        config: 'Altoro_web_test.yml'
         base_url: "https://deu.ast.checkmarx.net"
-        environment_id: "c608a51a-ec4e-4eef-81c4-a0241737efd7"
+        environment_id: "f7e3c8bc-9a0a-4b15-9b2c-ce71f2949b0b"
         fail_on: "HIGH"
         verbose: true
