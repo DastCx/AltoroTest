@@ -28,7 +28,7 @@ jobs:
     - name: Checkmarx DAST Github Action
       uses: Checkmarx/dast-github-action@v1.0.0-beta
       env:
-        CX_APIKEY: ${{ secrets.CX_ONE_API_KEY }}
+        CX_APIKEY: ${{ secrets.CX_ONE_API_KEY_CANARY }}
       with:
         command: "web"
         config: 'Altoro_web_test.yml'
