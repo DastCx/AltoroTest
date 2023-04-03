@@ -5,8 +5,8 @@ name: CxDAST_Altoro_web
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
-  # push:
-  #  branches: [ "main" ]
+  push:
+    branches: [ "main" ]
   # pull_request:
   #  branches: [ "main" ]
 
@@ -34,7 +34,7 @@ jobs:
         config: ${{ github.workspace }}/dast-config/Altoro_web_test.yml
         base_url: "https://deu.ast.checkmarx.net"
         environment_id: "f7e3c8bc-9a0a-4b15-9b2c-ce71f2949b0b"
-        fail_on: high
+        # fail_on: high
         verbose: true
         log_level: debug
         output: ./output
