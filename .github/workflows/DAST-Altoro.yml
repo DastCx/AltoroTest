@@ -39,6 +39,7 @@ jobs:
         verbose: true
         log_level: debug
         output: ./output
+        timeout: 3500
     - name: Reclaim output directory  
       if: always()  
       run: sudo chown -R 1001:1001 ${{ github.workspace }}/output
