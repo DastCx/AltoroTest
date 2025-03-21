@@ -40,7 +40,7 @@ jobs:
         # fail_on: high
         verbose: true
         log_level: debug
-        # output: ./output
+        output: ./output
         timeout: 3500
     # - name: Reclaim output directory  
     #  if: always()  
