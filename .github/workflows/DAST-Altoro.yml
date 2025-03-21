@@ -25,6 +25,8 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v3
+    - name: Change dir owner
+      run: sudo chown -R 1000:1000 ${{ github.workspace }}  
     # Scan DAST
     - name: Checkmarx DAST Github Action
       uses: Checkmarx/dast-github-action@v2.3.0
