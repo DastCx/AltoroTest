@@ -27,12 +27,12 @@ jobs:
     - uses: actions/checkout@v3
     # Scan DAST
     - name: Checkmarx DAST Github Action
-      uses: Checkmarx/dast-github-action@v2.3.0
+      uses: Checkmarx/dast-github-action@v1.0.2
       env:
         CX_APIKEY: ${{ secrets.CX_ONE_API_KEY_CANARY }}
       with:
         command: "web"
-        config: ${{ github.workspace }}/dast-config/Altoro_web_test.yml
+        config: ${{ github.workspace }}/dast-config/Altoro_web_small_test.yml
         base_url: "https://deu.ast.checkmarx.net"
         environment_id: "f7e3c8bc-9a0a-4b15-9b2c-ce71f2949b0b"
         # fail_on: high
